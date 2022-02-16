@@ -20,7 +20,6 @@ public class ContactDetails {
 		this.phoneNumber = phoneNumber;
 		this.eMail = eMail;
 		
-		
 	}
 	
 	public String getFName() {
@@ -52,6 +51,6 @@ public class ContactDetails {
 	}
 	
 	public String getEMail() {
-		return this.eMail;
+		return this.eMail; 
 	}
 }
