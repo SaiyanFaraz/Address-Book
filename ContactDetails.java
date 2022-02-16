@@ -5,12 +5,12 @@ public class ContactDetails {
 	private String address; 
 	private String city;
 	private String state;
-	private int zip;
-	private long phoneNumber;
+	private String zip;
+	private String phoneNumber;
 	private String eMail;
 	
 	public ContactDetails(String fName, String lName, String address, 
-			String city, String state, int zip, long phoneNumber, String eMail) {
+			String city, String state, String zip, String phoneNumber, String eMail) {
 		this.fName = fName;
 		this.lName = lName;
 		this.address = address;
@@ -43,11 +43,11 @@ public class ContactDetails {
 		return this.state;
 	}
 	
-	public int getZip() {
+	public String getZip() {
 		return this.zip;
 	}
 	
-	public long getPhoneNumber() {
+	public String getPhoneNumber() {
 		return this.phoneNumber;
 	}
 	

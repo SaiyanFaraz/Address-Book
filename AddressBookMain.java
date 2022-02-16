@@ -1,3 +1,4 @@
+import java.io.Console;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -7,28 +8,29 @@ public class AddressBookMain {
         
         ArrayList<ContactDetails> contact = new ArrayList<ContactDetails>();
         
+        Console con = System.console();
+
         System.out.println("Enter the FName and Lname");
-        Scanner scanner = new Scanner(System.in);
-        String fName = scanner.next();
-        String lName = scanner.next();
+        String fName = con.readLine();
+        String lName = con.readLine();
 
         System.out.println("Enter the address");
-        String address = scanner.next();
+        String address = con.readLine();
         
         System.out.println("Enter the city");
-        String city = scanner.next();
+        String city = con.readLine();
         
         System.out.println("Enter the state");
-        String state = scanner.next();
+        String state = con.readLine();
         
         System.out.println("Enter the zip code");
-        int zip = scanner.nextInt();
+        String zip = con.readLine();
         
         System.out.println("Enter the PhoneNumber");
-        long phoneNumber = scanner.nextLong();
+        String phoneNumber = con.readLine();
         
         System.out.println("Enter the Email");
-        String eMail = scanner.next();
+        String eMail = con.readLine();
         
         ContactDetails details = new ContactDetails(fName,lName,address,city,state,zip,phoneNumber,eMail);
         	contact.add(details);
