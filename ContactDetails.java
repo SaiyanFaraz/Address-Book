@@ -5,52 +5,49 @@ public class ContactDetails {
 	private String address; 
 	private String city;
 	private String state;
-	private String zip;
-	private String phoneNumber;
+	private int zip;
+	private long phoneNumber;
 	private String eMail;
 	
-	public ContactDetails(String fName, String lName, String address, 
-			String city, String state, String zip, String phoneNumber, String eMail) {
-		this.fName = fName;
-		this.lName = lName;
-		this.address = address;
-		this.city = city;
-		this.state = state;
-		this.zip = zip;
-		this.phoneNumber = phoneNumber;
-		this.eMail = eMail;
-		
+	public String getFirstName() {
+		return fName;
 	}
-	
-	public String getFName() {
-		return this.fName;
-	}
-	
-	public String getLName() {
-		return this.lName;
-	}
-	
-	public String getAddress() {
-		return this.address;
-	}
-	
-	public String getCity() {
-		return this.city;
-	}
-	
-	public String getState() {
-		return this.state;
-	}
-	
-	public String getZip() {
-		return this.zip;
-	}
-	
-	public String getPhoneNumber() {
-		return this.phoneNumber;
-	}
-	
-	public String getEMail() {
-		return this.eMail; 
-	}
+	public String setFirstName(String firstName){
+        this.fName = firstName;
+        return firstName;
+    }
+    public String setLastName(String lastName){
+        this.lName = lastName;
+        return lastName;
+    }
+    public long setPhoneNumber(long phoneNumber){
+        this.phoneNumber = phoneNumber;
+        return phoneNumber;
+    }
+    public String setEmail(String eMail){
+        this.eMail = eMail;
+        return eMail;
+    }
+    public String setAddress(String address){
+        this.address = address;
+        return address;
+    }
+    public String setCity(String city){
+        this.city = city;
+        return city;
+    }
+    public String setState(String state){
+        this.state = state;
+        return state;
+    }
+    public int setZipCode(int zipCode) {
+        this.zip = zipCode;
+        return zipCode;
+    }
+    @Override
+    public String toString() {
+        return "\nPerson Info [first Name = " + fName + ", last Name = " + lName + ", Email id = " + eMail +
+                ", address = " + address + "," + " city = " + city + ", state = " + state + ", zipcode = " + zip + ", " +
+                "phoneNumber = " + phoneNumber + "]\n";
+        }
 }
