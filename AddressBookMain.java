@@ -9,27 +9,27 @@ public class AddressBookMain {
         
         Console con = System.console();
 
-        System.out.println("Enter the FName and Lname");
-        String fName = con.readLine();
-        String lName = con.readLine();
+     // Checking If there is no console available, then exit.
+        if(con == null) 
+        {
+            System.out.print("No console available");
+            return;
+        }
+        
+        String fName = con.readLine("Enter the FName");
+        String lName = con.readLine("Enter the LName");
 
-        System.out.println("Enter the address");
-        String address = con.readLine();
+        String address = con.readLine("Enter the address");
         
-        System.out.println("Enter the city");
-        String city = con.readLine();
+        String city = con.readLine("Enter the city");
         
-        System.out.println("Enter the state");
-        String state = con.readLine();
+        String state = con.readLine("Enter the state");
         
-        System.out.println("Enter the zip code");
-        String zip = con.readLine();
+        String zip = con.readLine("Enter the zip code");
         
-        System.out.println("Enter the PhoneNumber");
-        String phoneNumber = con.readLine();
+        String phoneNumber = con.readLine("Enter the PhoneNumber");
         
-        System.out.println("Enter the Email");
-        String eMail = con.readLine();
+        String eMail = con.readLine("Enter the Email");
         
         ContactDetails details = new ContactDetails(fName,lName,address,city,state,zip,phoneNumber,eMail);
         	contact.add(details);
