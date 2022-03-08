@@ -103,6 +103,15 @@ public class AddressBookMain {
 			}
 		}
 	}
+	static void addMultipleContact() {
+		System.out.println("Enter the number of persons whose details you want "
+				+ "to add to the address book");
+		Scanner sc = new Scanner(System.in);
+		int noOfPerson = sc.nextInt();
+		for (int i=1;i<=noOfPerson;i++) {
+			addContact();
+		}
+	}
 	static void choices() {
 
 		int choice;
@@ -125,12 +134,14 @@ public class AddressBookMain {
 			case 4:
 				deleteContact();
 				break;
+			case 5:
+				addMultipleContact();
 			default:
 				System.out.println("Enter number from 1 to 4");
 				choice = 5;
 			}
 		}
-		while (choice < 5);
+		while (choice < 6);
 	}
 
 	public static void main(String[] args) {
